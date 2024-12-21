@@ -2,7 +2,7 @@ from fastapi import FastAPI, HTTPException, Depends
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 from pydantic import BaseModel
-from typing import List
+from typing import List, Optional
 from sqlalchemy.orm import Session
 from database import Base, engine, SessionLocal
 from crud import create_ingredient, update_ingredient, get_all_ingredients, create_recipe, get_recipes
@@ -24,15 +24,45 @@ def get_db():
 # Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allows all origins
+    allow_origins=["*"],
     allow_credentials=True,
-    allow_methods=["*"],  # Allows all methods
-    allow_headers=["*"],  # Allows all headers
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 @app.get("/")
 def read_root():
     return {"Welcome to Define Coders at KUET!"}
+
+class Recipe(BaseModel):    
+    recipeName: str
+    taste: Optional[str] = None
+    reviews: Optional[str] = None
+    cuisineType: Optional[str] = None
+    preparationTime: Optional[str] = None
+    ingredients: List[str]
+    instructions: Optional[str] = None
+
+@app.post("/add-recipe")
+def add_recipy_to_db(recipe: Recipe):    
+    with open("recipes/my_fav_recipes.txt", "a") as f:
+        f.write(f"{recipe.recipeName}\n")
+        if recipe.taste:
+            f.write(f"Taste: {recipe.taste}\n")
+        if recipe.reviews:
+            f.write(f"Reviews: {recipe.reviews}\n")
+        if recipe.cuisineType:
+            f.write(f"Cuisine Type: {recipe.cuisineType}\n")
+        if recipe.preparationTime:
+            f.write(f"Preparation Time: {recipe.preparationTime}\n")
+        f.write(f"Ingredients: {', '.join(recipe.ingredients)}\n")
+        if recipe.instructions:
+            f.write(f"Instructions: {recipe.instructions}\n")
+        f.write("\n")
+    
+    f.close()
+    return
+
 
 class RecipeRequest(BaseModel):
     ingredients: List[str]
