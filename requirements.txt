@@ -5,3 +5,7 @@ openai
 pydantic
 requests
 "fastapi[standard]"
+langchain_experimental
+langchain_openai
+langchain_chroma
+sqlalchemy

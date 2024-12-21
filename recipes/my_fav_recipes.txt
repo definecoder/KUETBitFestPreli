@@ -1,0 +1,158 @@
+Spaghetti Carbonara
+Taste: Savory and creamy
+Reviews: Alice gave it 4.5 stars, said "Delicious and easy to make!"; Bob gave it 4.0 stars, said "Loved the creamy texture, but a bit too salty."
+Cuisine Type: Italian
+Preparation Time: 25 minutes
+Ingredients: spaghetti, eggs, parmesan cheese, bacon, black pepper
+Instructions: Boil spaghetti, cook bacon, mix eggs with cheese, combine all, and season with black pepper.
+
+Chicken Biryani
+Taste: Spicy and aromatic
+Reviews: Priya gave it 5.0 stars, said "Authentic taste and perfectly spiced!"; Ahmed gave it 4.5 stars, said "Amazing, but needed more chicken pieces."
+Cuisine Type: Indian
+Preparation Time: 1 hour 30 minutes
+Ingredients: basmati rice, chicken, yogurt, spices, onions
+Instructions: Marinate chicken, fry onions, cook rice and chicken with spices, layer, and steam.
+
+Sushi Roll
+Taste: Fresh and umami
+Reviews: Yuki gave it 5.0 stars, said "Perfectly rolled and fresh ingredients."; Liam gave it 4.0 stars, said "Tasty, but needed more soy sauce."
+Cuisine Type: Japanese
+Preparation Time: 40 minutes
+Ingredients: sushi rice, nori sheets, raw fish, avocado, cucumber
+Instructions: Prepare sushi rice, slice ingredients, roll with nori sheets, and cut into pieces.
+
+Tacos al Pastor
+Taste: Smoky and spicy
+Reviews: Juan gave it 5.0 stars, said "Authentic Mexican flavor!"; Maria gave it 4.5 stars, said "Loved it, but needed more pineapple."
+Cuisine Type: Mexican
+Preparation Time: 45 minutes
+Ingredients: pork, pineapple, chili marinade, tortillas, onions, cilantro
+Instructions: Marinate pork, grill with pineapple, slice thinly, and serve in tortillas with toppings.
+
+Ratatouille
+Taste: Fresh and savory
+Reviews: Claire gave it 5.0 stars, said "Beautiful and delicious!"; Ethan gave it 4.0 stars, said "Great flavors but took time to prepare."
+Cuisine Type: French
+Preparation Time: 1 hour
+Ingredients: zucchini, eggplant, tomatoes, bell peppers, olive oil, herbs
+Instructions: Slice vegetables, layer in a dish, drizzle with olive oil and herbs, and bake.
+
+Pad Thai
+Taste: Sweet, tangy, and nutty
+Reviews: Ming gave it 5.0 stars, said "Better than takeout!"; Sara gave it 4.5 stars, said "Great taste but needed more peanuts."
+Cuisine Type: Thai
+Preparation Time: 30 minutes
+Ingredients: rice noodles, shrimp, eggs, peanuts, tamarind sauce, bean sprouts
+Instructions: Cook noodles, stir-fry shrimp and eggs, mix with sauce, and top with peanuts and sprouts.
+
+Greek Salad
+Taste: Light and refreshing
+Reviews: Dimitri gave it 5.0 stars, said "Perfect for summer!"; Elena gave it 4.5 stars, said "Loved the feta, but needed more olives."
+Cuisine Type: Greek
+Preparation Time: 15 minutes
+Ingredients: tomatoes, cucumbers, onions, olives, feta cheese, olive oil
+Instructions: Chop vegetables, toss with feta and olive oil, and serve chilled.
+
+Beef Stroganoff
+Taste: Creamy and hearty
+Reviews: Ivan gave it 5.0 stars, said "Comfort food at its best!"; Anna gave it 4.0 stars, said "Tasty but a bit heavy."
+Cuisine Type: Russian
+Preparation Time: 50 minutes
+Ingredients: beef, mushrooms, sour cream, onions, butter
+Instructions: Sauté beef and mushrooms, add onions and sour cream, and serve over noodles.
+
+Falafel Wrap
+Taste: Crispy and flavorful
+Reviews: Aisha gave it 5.0 stars, said "Perfectly spiced!"; Omar gave it 4.5 stars, said "Loved it, but pita was too thick."
+Cuisine Type: Middle Eastern
+Preparation Time: 40 minutes
+Ingredients: chickpeas, garlic, parsley, tahini, pita bread, vegetables
+Instructions: Blend chickpeas with spices, fry patties, and serve in pita with tahini and vegetables.
+
+Clam Chowder
+Taste: Creamy and savory
+Reviews: Jack gave it 5.0 stars, said "Rich and flavorful!"; Diane gave it 4.0 stars, said "Tasty but too thick."
+Cuisine Type: American
+Preparation Time: 45 minutes
+Ingredients: clams, potatoes, cream, onions, celery, butter
+Instructions: Sauté onions and celery, add clams and cream, and simmer with potatoes.
+
+Veggie Burger
+Taste: Savory and wholesome
+Reviews: Chloe gave it 4.5 stars, said "Healthy and tasty!"; Max gave it 4.0 stars, said "Good but needed more spices."
+Cuisine Type: American
+Preparation Time: 35 minutes
+Ingredients: black beans, breadcrumbs, onions, spices, burger buns
+Instructions: Mash beans with spices, form patties, grill, and serve in buns with toppings.
+
+Tom Yum Soup
+Taste: Spicy and tangy
+Reviews: Somchai gave it 5.0 stars, said "Authentic Thai soup!"; Emily gave it 4.5 stars, said "Delicious but a bit too spicy."
+Cuisine Type: Thai
+Preparation Time: 30 minutes
+Ingredients: shrimp, lemongrass, lime, chili, mushrooms, fish sauce
+Instructions: Boil broth with lemongrass and lime, add shrimp and mushrooms, and season with chili and fish sauce.
+
+Croissant
+Taste: Buttery and flaky
+Reviews: Pierre gave it 5.0 stars, said "Perfectly baked and delicious!"; Sophie gave it 4.0 stars, said "Tasty but a bit dense."
+Cuisine Type: French
+Preparation Time: 3 hours
+Ingredients: flour, butter, yeast, sugar, milk
+Instructions: Prepare dough, layer with butter, fold and chill repeatedly, and bake until golden.
+
+Chocolate Lava Cake
+Taste: Rich and gooey
+Reviews: Mia gave it 5.0 stars, said "Heavenly dessert!"; Leo gave it 4.5 stars, said "Amazing but too sweet."
+Cuisine Type: French
+Preparation Time: 25 minutes
+Ingredients: chocolate, butter, eggs, sugar, flour
+Instructions: Melt chocolate and butter, mix with eggs and sugar, bake until edges are firm and center is molten.
+
+Miso Soup
+Taste: Light and savory
+Reviews: Hiro gave it 5.0 stars, said "Classic Japanese comfort food!"; Emma gave it 4.0 stars, said "Good but needed more miso."
+Cuisine Type: Japanese
+Preparation Time: 20 minutes
+Ingredients: miso paste, tofu, seaweed, green onions, dashi stock
+Instructions: Boil dashi stock, dissolve miso paste, add tofu and seaweed, and garnish with green onions.
+
+Shakshuka
+Taste: Spicy and tangy
+Reviews: Layla gave it 5.0 stars, said "Perfect brunch dish!"; Adam gave it 4.5 stars, said "Delicious but a bit too spicy."
+Cuisine Type: Middle Eastern
+Preparation Time: 35 minutes
+Ingredients: tomatoes, bell peppers, eggs, onions, spices
+Instructions: Sauté onions and peppers, add tomatoes and spices, cook eggs on top, and serve with bread.
+
+Pho
+Taste: Aromatic and savory
+Reviews: Linh gave it 5.0 stars, said "Authentic Vietnamese flavor!"; John gave it 4.5 stars, said "Great taste but needed more herbs."
+Cuisine Type: Vietnamese
+Preparation Time: 1 hour 30 minutes
+Ingredients: rice noodles, beef, bone broth, spices, herbs
+Instructions: Simmer broth with spices, cook noodles, assemble with beef and herbs, and serve hot.
+
+Banana Pancakes
+Taste: Sweet and fluffy
+Reviews: Lily gave it 5.0 stars, said "Perfect for breakfast!"; Noah gave it 4.0 stars, said "Good but a bit too sweet."
+Cuisine Type: American
+Preparation Time: 25 minutes
+Ingredients: bananas, flour, eggs, milk, sugar
+Instructions: Mash bananas, mix with batter, cook on a griddle, and serve with syrup.
+
+Fish and Chips
+Taste: Crispy and savory
+Reviews: Oliver gave it 5.0 stars, said "Crispy and delicious!"; Amelia gave it 4.5 stars, said "Great but needed more seasoning."
+Cuisine Type: British
+Preparation Time: 40 minutes
+Ingredients: fish fillets, potatoes, flour, eggs, breadcrumbs
+Instructions: Coat fish with batter, fry until golden, and serve with chips and tartar sauce.
+
+Hummus
+Taste: Creamy and tangy
+Reviews: Zain gave it 5.0 stars, said "Perfect dip for veggies!"; Maya gave it 4.0 stars, said "Tasty but a bit too thick."
+Cuisine Type: Middle Eastern
+Preparation Time: 15 minutes
+Ingredients: chickpeas, tahini
