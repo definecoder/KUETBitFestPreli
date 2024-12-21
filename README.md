@@ -1,5 +1,12 @@
 # KUETBitFestPreli
 
+# Installation
+
+- Clone the repository.
+- Create a virtual environment `python3 -m venv envname` and activate it.
+- Install the requirements `pip install -r requirements.txt`.
+
+
 # CHALLENGE 2
 
 # API DOC
