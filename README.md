@@ -3,10 +3,10 @@
 # Installation
 
 - Clone the repository.
+- create a .env file. where you will store your openai api key
 - Create a virtual environment `python3 -m venv envname` and activate it.
 - Install the requirements `pip install -r requirements.txt`.
 - run the app `fastapi dev` or `uvicorn main:app --reload`
-
 
 # CHALLENGE 2
 
