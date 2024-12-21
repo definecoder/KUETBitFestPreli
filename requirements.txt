@@ -4,4 +4,4 @@ python-dotenv
 openai
 pydantic
 requests
-"fastapi[standard]"
+sqlalchemy
