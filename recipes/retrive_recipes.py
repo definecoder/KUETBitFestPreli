@@ -17,7 +17,7 @@ def retriveRecipe(userQuery: str):
         persist_directory="./chroma_langchain_db",
     )
             
-    output = vector_store.similarity_search(userQuery, k=2)
+    output = vector_store.similarity_search(userQuery, k=4)
     
     combined_knowledge = ""
     for chunk in output:
@@ -26,4 +26,4 @@ def retriveRecipe(userQuery: str):
     return combined_knowledge    
 
 if __name__ == "__main__":
-    print(retriveRecipe("I want to eat breakfast and I have fish fillets, potatoes."))
+    print(retriveRecipe("I want to eat pasta."))

@@ -4,14 +4,17 @@ import uvicorn
 from pydantic import BaseModel
 from typing import List, Optional
 from sqlalchemy.orm import Session
+from chat.suggestRecipy import suggestRecipy
 from database import Base, engine, SessionLocal
 from crud import create_ingredient, update_ingredient, get_all_ingredients, create_recipe, get_recipes
 from models import Ingredient, Recipe
+from recipes.addRecipe import add_recipe_to_chroma
+from recipes.retrive_recipes import retriveRecipe
 
 app = FastAPI()
 
 
-Base.metadata.create_all(bind=engine)
+# Base.metadata.create_all(bind=engine)
 
 # Dependency
 def get_db():
@@ -35,7 +38,7 @@ def read_root():
     return {"Welcome to Define Coders at KUET!"}
 
 class Recipe(BaseModel):    
-    recipeName: str
+    name: str
     taste: Optional[str] = None
     reviews: Optional[str] = None
     cuisineType: Optional[str] = None
@@ -43,52 +46,37 @@ class Recipe(BaseModel):
     ingredients: List[str]
     instructions: Optional[str] = None
 
-@app.post("/add-recipe")
-def add_recipy_to_db(recipe: Recipe):    
+@app.post("/recipes")
+async def add_recipy_to_db(recipe: Recipe):    
     with open("recipes/my_fav_recipes.txt", "a") as f:
-        f.write(f"{recipe.recipeName}\n")
+        full_recipy_txt = f"{recipe.name}\n"
         if recipe.taste:
-            f.write(f"Taste: {recipe.taste}\n")
+            full_recipy_txt += f"Taste: {recipe.taste}\n"
         if recipe.reviews:
-            f.write(f"Reviews: {recipe.reviews}\n")
+            full_recipy_txt += f"Reviews: {recipe.reviews}\n"
         if recipe.cuisineType:
-            f.write(f"Cuisine Type: {recipe.cuisineType}\n")
+            full_recipy_txt += f"Cuisine Type: {recipe.cuisineType}\n"
         if recipe.preparationTime:
-            f.write(f"Preparation Time: {recipe.preparationTime}\n")
-        f.write(f"Ingredients: {', '.join(recipe.ingredients)}\n")
+            full_recipy_txt += f"Preparation Time: {recipe.preparationTime}\n"
+        full_recipy_txt += f"Ingredients: {', '.join(recipe.ingredients)}\n"
         if recipe.instructions:
-            f.write(f"Instructions: {recipe.instructions}\n")
-        f.write("\n")
-    
+            full_recipy_txt += f"Instructions: {recipe.instructions}\n"
+        full_recipy_txt += "\n"
+        f.write("\n\n" + full_recipy_txt)    
     f.close()
-    return
-
-
-class RecipeRequest(BaseModel):
-    ingredients: List[str]
-    name: str
-
-class RecipeResponse(BaseModel):
-    id: int
-    name: str
-    ingredients: List[str]
-
-@app.post("/generate-recipe", response_model=RecipeResponse)
-def generate_recipe(data: RecipeRequest):
-    try:
-        ingredients = data["ingredients"]
-        recipe = {
-            "id": 1,
-            "name": data["name"],
-            "ingredients": ingredients
-        }
-        return {"recipe": recipe}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
     
+    await add_recipe_to_chroma(full_recipy_txt)
+    
+    return {"message": "Recipe added successfully"}
+    
+class IngredientCreate(BaseModel):
+    name: str
+    quantity: int
+    unit: str    
+
 @app.post("/ingredients/")
-def add_ingredient(name: str, quantity: int, unit: str, db: Session = Depends(get_db)):
-    return create_ingredient(db, name, quantity, unit)
+def add_ingredient(ingredient: IngredientCreate, db: Session = Depends(get_db)):
+    return create_ingredient(db, ingredient.name, ingredient.quantity, ingredient.unit)
 
 @app.put("/ingredients/{ingredient_id}")
 def modify_ingredient(ingredient_id: int, quantity: int, db: Session = Depends(get_db)):
@@ -98,13 +86,21 @@ def modify_ingredient(ingredient_id: int, quantity: int, db: Session = Depends(g
 def list_ingredients(db: Session = Depends(get_db)):
     return get_all_ingredients(db)
 
-@app.post("/recipes/")
-def add_recipe(name: str, description: str, taste_profile: str, cuisine: str, ingredients: str, instructions: str, db: Session = Depends(get_db)):
-    return create_recipe(db, name, description, taste_profile, cuisine, ingredients, instructions)
-
-@app.get("/recipes/")
+@app.get("/recipes")
 def list_recipes(db: Session = Depends(get_db)):
     return get_recipes(db)
+
+class ChatRequest(BaseModel):
+    query: str
+
+@app.post("/chat/")
+async def chat(request: ChatRequest, db: Session = Depends(get_db)):
+    query = request.query
+    recipes_from_rag = retriveRecipe(query)
+    inggredients_available = [inggredient.name for inggredient in get_all_ingredients(db)]
+    recipes_from_suggestRecipy = suggestRecipy(query, recipes_from_rag, inggredients_available)
+    
+    return {"chat_response": recipes_from_suggestRecipy.natural_language_recipe_response, "ingredients_needed_for_recipe": recipes_from_suggestRecipy.natural_language_recipe_ingredients, "recipes_from_rag": recipes_from_rag, "inggredients_available": inggredients_available}
 
 
 if __name__ == "__main__":

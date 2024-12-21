@@ -1,13 +1,83 @@
 # KUETBitFestPreli
 
-# Step 1: 
-Build Knowledge Base in chroma db from a txt file and
-also apis to dynamically add more recipies
-initially it will take from a txt file then when added new
-recipies it will add to the chroma db & also the txt file
+# CHALLENGE 2
 
-# Step 2:
-Build  Ingredient Database in sqlite db
+# API DOC
 
-# Step 3:
-AI APIs to get recipe
+- Route: `/ingredients`
+- Method: `GET`
+- Sample Response:
+
+```json
+[
+  {
+    "name": "egg",
+    "quantity": 2,
+    "id": 1,
+    "unit": "pieces"
+  },
+  {
+    "name": "suger",
+    "quantity": 2,
+    "id": 2,
+    "unit": "kg"
+  },
+  {
+    "name": "raw fish",
+    "quantity": 2,
+    "id": 3,
+    "unit": "pieces"
+  },
+  {
+    "name": "avocado",
+    "quantity": 2,
+    "id": 4,
+    "unit": "pieces"
+  },
+  {
+    "name": "cucumber",
+    "quantity": 2,
+    "id": 5,
+    "unit": "kg"
+  }
+]
+```
+
+- Route: `/ingredients`
+- Method: `POST`
+- Sample Payload:
+
+```json
+{
+  "name": "egg",
+  "quantity": 2,
+  "unit": "pieces"
+}
+```
+
+- Route: `/recipes`
+- Method: `POST`
+- Sample Payload:
+
+```json
+// Here all the fields are optional except name and ingredients.
+{
+  "name": "Pudding Cake",
+  "taste": "Sweet & Soft",
+  "reviews": "I like the pudding so much its so soft to eat",
+  "cuisineType": "Bangladeshi",
+  "preparationTime": "1 Hour",
+  "ingredients": ["egg", "water", "suger"],
+  "instructions": "First boil water, theÏn mix eggs and suger and rotate them. Then puth them in the stove for some time. Then Cut and enjoy."
+}
+```
+
+- Route: `/recipes`
+- Method: `GET`
+- Sample Response:
+
+```json
+{
+  "query": "I want to make a pudding"
+}
+```
